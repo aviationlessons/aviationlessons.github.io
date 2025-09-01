@@ -36,12 +36,6 @@ html, body {
   font-style: normal;
 }
 
-.coda-extrabold {
-  font-family: "Coda", system-ui;
-  font-weight: 800;
-  font-style: normal;
-}
-
 
 .syne-mono-regular {
   font-family: "Syne Mono", monospace;
@@ -88,6 +82,7 @@ h2 {
 /* Paragraph styling */
 p {
   font-size: 1.3em;       /* Slightly larger text for the paragraph */
+  font-family: 'Coda', sans-serif;  /* Use custom font for the heading */
   line-height: 1.6;       /* Adjust line height for better readability */
   margin: 0 auto;         /* Auto margin for centering */
   color: white;           /* Set text to white */
