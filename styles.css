@@ -1,0 +1,104 @@
+/* Make sure the HTML and Body take up full height and are centered */
+html, body {
+  height: 100%;              /* Ensure the body takes up the full viewport height */
+  width: relative;
+  margin: 0;                 /* Remove default margin */
+  padding: 300;                /* Remove default padding */
+  display: flex;             
+  flex-direction: column;    
+  justify-content: center;   
+  align-items: center;      /* Centers content horizontally */
+  text-align: center;        /* Centers text inside the elements */
+  font-family: 'Coda', sans-serif;  /* Default font for body */
+  background-color: black;   /* Set background to black */
+  color: white;  /* Set text to white */
+  overflow: auto; /* Ensures overflow content is visible */
+}
+
+/* Tablet to small desktop (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    body {
+        padding-top: 100px;
+    }
+}
+
+/* Desktop (1024px and above) */
+@media (min-width: 1024px) {
+    body {
+        padding-top: 100px;
+    }
+}
+
+
+.coda-regular {
+  font-family: "Coda", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.coda-extrabold {
+  font-family: "Coda", system-ui;
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+.syne-mono-regular {
+  font-family: "Syne Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.logos {
+  width: 45px;   /* Set a fixed width */
+  height: auto;   /* Keep the aspect ratio intact */
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Heading styling */
+h1 {
+    font-family: 'Syne Mono', sans-serif;
+    font-size: 5em; /* Default size */
+    color: white;
+    display: block;
+    position: relative;
+}
+
+/* Adjust font-size for larger screens */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 6em; /* Increase for large screens, if necessary */
+    }
+}
+
+h2 {
+  font-family: 'Coda', sans-serif;  /* Use custom font for the heading */
+  font-size: 2em;                       /* Large text size for the heading */
+  color: white;                        /* Set text to white */
+  margin-bottom: 20px;                  /* Space below the heading */
+}
+
+/* Paragraph styling */
+p {
+  font-size: 1.3em;       /* Slightly larger text for the paragraph */
+  line-height: 1.6;       /* Adjust line height for better readability */
+  margin: 0 auto;         /* Auto margin for centering */
+  color: white;           /* Set text to white */
+}
+
+/* Style the links (like "Listen here") */
+a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;  /* Underline links on hover */
+}
