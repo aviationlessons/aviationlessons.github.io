@@ -1,27 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="generator" content="THE AVIATOR production | High quality mixing and original music">
-    
-    <!-- TEST CSS - Add this temporarily -->
-    <style>
-        body {
-            background-color: red;
-            color: white;
-            font-size: 20px;
-            text-align: center;
-        }
-        h1 {
-            color: yellow;
-            font-size: 50px;
-        }
-    </style>
-    
-    <title>THE AVIATOR©</title>
-</head>
-<body>
-    <h1>THE AVIATOR</h1>
-    <p>This is a test</p>
-</body>
-</html>
+/* Import fonts first */
+@import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono:wght@400&display=swap');
+
+/* Make sure the HTML and Body take up full height and are centered */
+html, body {
+  height: 100%;
+  width: 100%;               /* Fixed: was 'relative' */
+  margin: 0;
+  padding: 0;                /* Fixed: was '300' without unit */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Coda', sans-serif;
+  background-color: black;
+  color: white;
+  overflow: auto;
+}
+
+/* Tablet to small desktop (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    body {
+        padding-top: 100px;
+    }
+}
+
+/* Desktop (1024px and above) */
+@media (min-width: 1024px) {
+    body {
+        padding-top: 100px;
+    }
+}
+
+.coda-regular {
+  font-family: "Coda", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.coda-extrabold {
+  font-family: "Coda", system-ui;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.syne-mono-regular {
+  font-family: "Syne Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logos {
+  width: 45px;
+  height: auto;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Heading styling */
+h1 {
+    font-family: 'Syne Mono', monospace; /* Fixed: changed sans-serif to monospace */
+    font-size: 5em;
+    color: white;
+    display: block;
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 6em;
+    }
+}
+
+h2 {
+  font-family: 'Coda', sans-serif;
+  font-size: 2em;
+  color: white;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.3em;
+  line-height: 1.6;
+  margin: 0 auto;
+  color: white;
+}
+
+a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
