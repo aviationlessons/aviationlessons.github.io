@@ -45,9 +45,11 @@ html, body {
   font-style: normal;
 }
 
-.syne-mono-regular {
-  font-family: "Syne Mono", monospace;
-  font-weight: 400;
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
   font-style: normal;
 }
 
