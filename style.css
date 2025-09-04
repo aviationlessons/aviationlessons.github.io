@@ -49,7 +49,7 @@ html, body {
 .oswald {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -81,7 +81,7 @@ h1 {
 
 h2 {
   font-family: 'Oswald', sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
   color: white;
   margin-bottom: 20px;
 }
