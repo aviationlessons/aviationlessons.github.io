@@ -33,6 +33,56 @@ html, body {
     }
 }
 
+/* Make all images scale nicely */
+img {
+  max-width: 100%;   /* never overflow their container */
+  height: auto;      /* keep aspect ratio */
+  display: block;    /* removes weird gaps under inline images */
+  margin: 0 auto;    /* centers them */
+}
+
+.container img {
+  max-width: 200px;   /* keeps logo slim */
+}
+
+.site-links img {
+  max-width: 300px;   /* keeps them slim */
+  margin: 10px;
+  transition: transform 0.2s ease-in-out; /* hover effect */
+}
+
+.site-links img:hover {
+  transform: scale(1.05); /* subtle zoom on hover */
+}
+
+.logos {
+  width: 40px;
+  height: auto;
+}
+
+/* On small screens (phones) */
+@media (max-width: 600px) {
+  .container img {
+    max-width: 150px;  /* smaller logo */
+  }
+
+  .site-links img {
+    max-width: 200px;  /* slim down graphics */
+  }
+}
+
+/* On larger screens */
+@media (min-width: 1024px) {
+  .container img {
+    max-width: 250px; 
+  }
+
+  .site-links img {
+    max-width: 350px;
+  }
+}
+
+
 .coda-regular {
   font-family: "Coda", system-ui;
   font-weight: 400;
