@@ -1,146 +1,81 @@
-/* Import fonts first */
+/* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
-/* Make sure the HTML and Body take up full height and are centered */
+/* Global page setup */
 html, body {
-  height: 100%;
-  width: 100%;               /* Fixed: was 'relative' */
   margin: 0;
-  padding: 0;                /* Fixed: was '300' without unit */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  padding: 0;
+  min-height: 100%;
   font-family: 'Coda', sans-serif;
   background-color: black;
   color: white;
-  overflow: auto;
-}
-
-/* Tablet to small desktop (768px to 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-    body {
-        padding-top: 100px;
-    }
-}
-
-/* Desktop (1024px and above) */
-@media (min-width: 1024px) {
-    body {
-        padding-top: 100px;
-    }
+  text-align: center;
 }
 
 /* Make all images scale nicely */
 img {
-  max-width: 100%;   /* never overflow their container */
+  max-width: 100%;   /* never overflow container */
   height: auto;      /* keep aspect ratio */
-  display: block;    /* removes weird gaps under inline images */
-  margin: 0 auto;    /* centers them */
+  display: block;    /* removes inline gaps */
+  margin: 0 auto;    /* centers images */
+  border-radius: 8px;
 }
 
-.container img {
-  max-width: 200px;   /* keeps logo slim */
+/* Container for all content */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Logo only */
+.logo {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+/* Site links section */
+.site-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .site-links img {
-  max-width: 300px;   /* keeps them slim */
-  margin: 10px;
-  transition: transform 0.2s ease-in-out; /* hover effect */
+  max-width: 300px;
+  transition: transform 0.2s ease-in-out;
 }
 
 .site-links img:hover {
-  transform: scale(1.05); /* subtle zoom on hover */
+  transform: scale(1.05);
 }
 
+/* Social icons */
 .logos {
   width: 40px;
   height: auto;
 }
 
-/* On small screens (phones) */
-@media (max-width: 600px) {
-  .container img {
-    max-width: 150px;  /* smaller logo */
-  }
-
-  .site-links img {
-    max-width: 200px;  /* slim down graphics */
-  }
-}
-
-/* On larger screens */
-@media (min-width: 1024px) {
-  .container img {
-    max-width: 250px; 
-  }
-
-  .site-links img {
-    max-width: 350px;
-  }
-}
-
-
-.coda-regular {
-  font-family: "Coda", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.coda-extrabold {
-  font-family: "Coda", system-ui;
-  font-weight: 800;
-  font-style: normal;
-}
-
-
-.oswald {
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.logos {
-  width: 45px;
-  height: auto;
-}
-
-.header {
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-/* Heading styling */
+/* Typography */
 h1 {
-    font-family: 'Syne Mono', monospace; /* Fixed: changed sans-serif to monospace */
-    font-size: 5em;
-    color: white;
-    display: block;
-    position: relative;
-}
-
-@media (min-width: 1024px) {
-    h1 {
-        font-size: 6em;
-    }
+  font-family: 'Syne Mono', monospace;
+  font-size: 3em;
+  margin-bottom: 20px;
 }
 
 h2 {
   font-family: 'Oswald', sans-serif;
   font-size: 1.5em;
-  color: white;
   margin-bottom: 20px;
 }
 
 p {
-  font-size: 1.3em;
+  font-size: 1.2em;
   line-height: 1.6;
-  margin: 0 auto;
-  color: white;
+  margin: 0 auto 20px auto;
 }
 
 a {
@@ -151,3 +86,29 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .logo {
+    max-width: 150px;
+  }
+  .site-links img {
+    max-width: 200px;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo {
+    max-width: 250px;
+  }
+  .site-links img {
+    max-width: 350px;
+  }
+  h1 {
+    font-size: 4.5em;
+  }
+}
+
