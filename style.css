@@ -112,3 +112,11 @@ a:hover {
   }
 }
 
+
+audio {
+  width: 100%;      /* responsive player */
+  max-width: 400px; /* keep it neat */
+  margin: 10px auto;
+  display: block;
+}
+
